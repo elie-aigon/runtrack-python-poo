@@ -1,26 +1,27 @@
-class Personnage:
+import math
+class Cercle:
     def __init__(self):
-        self.x = 5
-        self.y = 10
+        self.rayon = 3
 
-    def position(self):
-        print(self.x, self.y)
+    def changerRayon(self, new_rayon):
+        self.rayon = new_rayon
+    
+    def afficherInfos(self):
+        print(self.rayon)
 
-    def gauche(self):
-        self.x -= 1
+    def circonférence(self):
+        print("circ: ", 2 * math.pi * self.rayon)
 
-    def droite(self):
-        self.x += 1
+    def aire(self):
+        print('aire: ', self.rayon * self.rayon * math.pi)
 
-    def bas(self):
-        self.y += 1
+    def diametre(self):
+        print("diametre : ", self.rayon * 2)
 
-    def haut(self):
-        self.y -= 1    
-
-
-elie = Personnage()
-elie.position()
-elie.droite()
-elie.bas()
-elie.position()
+cercle = Cercle()
+cercle.afficherInfos()
+cercle.aire()
+cercle.circonférence()
+cercle.diametre()
+cercle.changerRayon(5)
+cercle.afficherInfos()

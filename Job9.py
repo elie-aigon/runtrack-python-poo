@@ -1,27 +1,53 @@
-import math
-class Cercle:
-    def __init__(self):
-        self.rayon = 3
+class Produit:
+    def __init__(self, nom, prix, TVA):
+        self.nom = nom
+        self.prixHT = prix
+        self.TVA = TVA
 
-    def changerRayon(self, new_rayon):
-        self.rayon = new_rayon
+    def CalculerPrixTTC(self):
+        self.prixTTC = self.prixHT + (self.TVA * self.prixHT)
+        return self.prixTTC
     
-    def afficherInfos(self):
-        print(self.rayon)
+    def afficher(self):
+        list_aff = [self.nom, self.prixHT, self.TVA]
+        return list_aff
 
-    def circonférence(self):
-        print("circ: ", 2 * math.pi * self.rayon)
+    def change_name(self, new_name):
+        self.nom = new_name
 
-    def aire(self):
-        print('aire: ', self.rayon * self.rayon * math.pi)
+    def change_prix(self, new_prix):
+        self.prixHT = new_prix
 
-    def diametre(self):
-        print("diametre : ", self.rayon * 2)
+    def return_name(self):
+        return self.nom
 
-cercle = Cercle()
-cercle.afficherInfos()
-cercle.aire()
-cercle.circonférence()
-cercle.diametre()
-cercle.changerRayon(5)
-cercle.afficherInfos()
+    def return_prixht(self):
+        return self.prixHT
+
+kebab = Produit("kebab", 6, 0.15)
+
+for element in kebab.afficher():
+    print(element)
+
+print(kebab.return_name())
+print(kebab.return_prixht())
+print(kebab.CalculerPrixTTC())
+kebab.change_name("kebab XL")
+kebab.change_prix(8)
+for element in kebab.afficher():
+    print(element)
+print(kebab.CalculerPrixTTC())
+
+print('#################################')
+souris = Produit("souris", 80, 0.2)
+for element in souris.afficher():
+    print(element)
+print(souris.CalculerPrixTTC())
+print(souris.return_name())
+print(souris.return_prixht())
+souris.change_name("souris XXL")
+souris.change_prix(110)
+for element in souris.afficher():
+    print(element)
+
+print(souris.CalculerPrixTTC())

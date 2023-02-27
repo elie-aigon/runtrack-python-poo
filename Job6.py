@@ -1,28 +1,16 @@
-class Point:
+class Animal:
     def __init__(self):
-        self.x = 5
-        self.y = 6
+        self.age = 0
+        self.prenom = ""
 
-    def affLesPoints(self):
-        print(self.x, self.y)
+    def vieillir(self):
+        self.age += 1
 
-    def affX(self):
-        print(self.x)
+    def nommer(self, prenom):
+        self.prenom = prenom
 
-    def affY(self):
-        print(self.y)
-
-    def changeX(self, new_X):
-        self.x = new_X
-
-    def changeY(self, new_Y):
-        self.y = new_Y
-
-point = Point()
-point.affLesPoints()
-point.affX()
-point.affY()
-point.changeX(4)
-point.affX()
-point.changeY(9)
-point.affY()
+loup = Animal()
+print(loup.age, loup.prenom)
+loup.vieillir()
+loup.nommer("loulou")
+print(loup.age, loup.prenom)

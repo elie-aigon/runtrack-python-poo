@@ -1,16 +1,25 @@
-class Animal:
+class Personnage:
     def __init__(self):
-        self.age = 0
-        self.prenom = ""
+        self.x = 5
+        self.y = 10
 
-    def vieillir(self):
-        self.age += 1
+    def position(self):
+        print(self.x, self.y)
 
-    def nommer(self, prenom):
-        self.prenom = prenom
+    def gauche(self):
+        self.x -= 1
 
-loup = Animal()
-print(loup.age, loup.prenom)
-loup.vieillir()
-loup.nommer("loulou")
-print(loup.age, loup.prenom)
+    def droite(self):
+        self.x += 1
+
+    def bas(self):
+        self.y += 1
+
+    def haut(self):
+        self.y -= 1    
+
+elie = Personnage()
+elie.position()
+elie.droite()
+elie.bas()
+elie.position()

@@ -1,13 +1,28 @@
-class Personne:
-    def __init__(self, nom, prenom):
-        self.nom = nom
-        self.prenom = prenom
+class Point:
+    def __init__(self):
+        self.x = 5
+        self.y = 6
 
-    def Sepresenter(self):
-        print("Je suis ", self.prenom, self.nom)
+    def affLesPoints(self):
+        print(self.x, self.y)
 
-personne1 = Personne("aigon", "elie")
-personne2 = Personne("Fermaud", "Yoann")
+    def affX(self):
+        print(self.x)
 
-personne1.Sepresenter()
-personne2.Sepresenter()
+    def affY(self):
+        print(self.y)
+
+    def changeX(self, new_X):
+        self.x = new_X
+
+    def changeY(self, new_Y):
+        self.y = new_Y
+
+point = Point()
+point.affLesPoints()
+point.affX()
+point.affY()
+point.changeX(4)
+point.affX()
+point.changeY(9)
+point.affY()
