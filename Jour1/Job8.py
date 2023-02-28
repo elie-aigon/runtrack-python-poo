@@ -7,21 +7,18 @@ class Cercle:
         self.rayon = new_rayon
     
     def afficherInfos(self):
-        print(self.rayon)
+        print('rayon : ', self.rayon, "diametre : ", self.diametre(), "circonférence : ", self.circonférence(), "aire : ", self.aire())
 
     def circonférence(self):
-        print("circ: ", 2 * math.pi * self.rayon)
+        return  2 * math.pi * self.rayon
 
     def aire(self):
-        print('aire: ', self.rayon * self.rayon * math.pi)
+        return self.rayon * self.rayon * math.pi
 
     def diametre(self):
-        print("diametre : ", self.rayon * 2)
+        return  self.rayon * 2
 
 cercle = Cercle()
 cercle.afficherInfos()
-cercle.aire()
-cercle.circonférence()
-cercle.diametre()
 cercle.changerRayon(5)
 cercle.afficherInfos()
