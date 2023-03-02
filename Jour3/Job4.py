@@ -43,35 +43,38 @@ class Equipe:
     def afficherStatsJoueurs(self):
         for joueur in self.joueurs:
             joueur.afficherStats()
+            print("---------------")
     
     def mettreAJourStatsJoueur(self):
         pass
 
 
-elie = Joueur("Elie", 4, "gardien", 10, 5, 1, 0)
-yoann= Joueur("yoann", 5, "défenseur", 15, 3, 8, 1)
-aurore = Joueur("aurore", 6, "attaquant", 35, 14, 3, 5)
+elie = Joueur("Elie", 4, "gardien", 0, 0, 0, 0)
+yoann= Joueur("yoann", 5, "défenseur", 0, 0, 0, 0)
+aurore = Joueur("aurore", 6, "attaquant", 0, 0, 0, 0)
 
 om = Equipe("OM", [elie, yoann, aurore])
 
-hugo = Joueur("hugo", 1, "gardien", 10, 5, 1, 0)
-remi= Joueur("remi", 3, "défenseur", 15, 3, 8, 1)
-leo = Joueur("leo", 9, "attaquant", 35, 14, 3, 5)
+hugo = Joueur("hugo", 1, "gardien", 0, 0, 0, 0)
+remi= Joueur("remi", 3, "défenseur", 0, 0, 0, 0)
+leo = Joueur("leo", 9, "attaquant", 0, 0, 0, 0)
 
 paris = Equipe("PSG", [hugo, remi, leo])
 
 
 paris.afficherStatsJoueurs()
-print("###############################################")
+
 om.afficherStatsJoueurs()
 
 aurore.marquerUnBut()
 elie.recevoirJaune()
-
 hugo.recevoirRouge()
 yoann.recevoirRouge()
 yoann.marquerUnBut()
+leo.recevoirRouge()
+leo.recevoirRouge()
+remi.marquerUnBut()
 
-paris.afficherStatsJoueurs()
 print("###############################################")
+paris.afficherStatsJoueurs()
 om.afficherStatsJoueurs()

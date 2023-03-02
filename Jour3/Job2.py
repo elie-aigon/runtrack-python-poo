@@ -24,7 +24,7 @@ class CompteBancaire:
             destinataire.versement(montant)
 
     def retrait(self, montant):
-        if self.__solde >= montant and self.__decouvert:
+        if self.__solde >= montant or self.__decouvert:
             self.__solde -= montant
 
     def agios(self):
@@ -37,8 +37,9 @@ compte2 = CompteBancaire(2, "mahel", "aigon", -200, True)
 
 compte1.afficher()
 compte2.afficher()
-
+print("#############")
 compte2.agios()
+compte2.afficher()
 compte1.virement(220, compte2)
 
 compte1.afficher()

@@ -12,7 +12,6 @@ class Personnage:
     def showInfos(self):
         print("Nom = ", self.nom, "; HP = ", self.vie)
 
-    
 class Jeu:
     def __init__(self):
         self.lancerJeu()
@@ -47,11 +46,10 @@ class Jeu:
 taken = Jeu()
 
 i = 0
-
 while True:
     print("Round", i + 1)
     taken.showInfosPlayers()
-    if i %2 == 0:
+    if i % 2 == 0:
         taken.players[0].attaquer(taken.players[1])
     else:
         taken.players[1].attaquer(taken.players[0])

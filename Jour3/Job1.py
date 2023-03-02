@@ -6,7 +6,7 @@ class Ville:
     def showInfos(self):
         return self.__nb_habitants
 
-    def ajouterPopulationBis(self):
+    def ajouterPopulation(self):
         self.__nb_habitants += 1
 
 class Personne:
@@ -17,17 +17,17 @@ class Personne:
         self.ajouterPopulation(self.__ville)
 
     def ajouterPopulation(self, ville):
-        ville.ajouterPopulationBis()
+        ville.ajouterPopulation()
 
 Paris = Ville("Paris", 1000000)
 Marseille = Ville("Marseille", 861635)
-print("Paris", Paris.showInfos())
+
+print("Paris: ", Paris.showInfos())
 print("Marseille: ", Marseille.showInfos())
 
 Jhon = Personne("Jhon", 45, Paris)
 Myrtille = Personne("Myrtille", 4, Paris)
 Chloe = Personne("Chloe", 18, Marseille)
-
 
 print("Paris", Paris.showInfos())
 print("Marseille: ", Marseille.showInfos())

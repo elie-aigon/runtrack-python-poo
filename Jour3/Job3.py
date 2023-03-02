@@ -35,14 +35,15 @@ class ListeDeTaches:
             print("Titre = ", element.titre, "Status = ", element.status)
 
 
-tache1 = Tache("tache1", "rien", "à faire")
-tache2 = Tache("tache2", "rien", "à faire")
-tache3 = Tache("tache3", "rien", "terminer")
-tache4 = Tache("tache4", "rien", "à faire")
-tache5 = Tache("tache5", "rien", "terminer")
+tache1 = Tache("tache1", "", "à faire")
+tache2 = Tache("tache2", "", "à faire")
+tache3 = Tache("tache3", "", "terminer")
+tache4 = Tache("tache4", "", "à faire")
+tache5 = Tache("tache5", "", "terminer")
 
 liste = ListeDeTaches([tache1, tache2, tache3, tache4])
 liste.filtreListe()
 liste.ajouterTache(tache5)
 liste.marquerCommeFinie(tache1)
+print("#############")
 liste.filtreListe()
