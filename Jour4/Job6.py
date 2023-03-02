@@ -16,7 +16,7 @@ class Vehicule:
 
 class Voiture(Vehicule):
     def __init__(self, marque, model, annee, prix):
-        super().__init__( marque, model, annee, prix)
+        Vehicule.__init__(self, marque, model, annee, prix)
         self.portes = 4
 
     def informationsVehicule(self):
